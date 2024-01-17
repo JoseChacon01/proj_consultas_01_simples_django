@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Todos as áreas:</p>
+    {% for area in todas_areas %}
+    <p>{{area.id}} - {{area.nome}}</p>
+    {% endfor%}
+    <hr/>
+
+    <p>Id da área Informática:</p>
+    {{area_info.id}}
+    <hr/>
+
+    <p>Áreas que começam com a letra 'E':</p>
+    {% for area in area_e %}
+    <p>{{area.id}} - {{area.nome}}</p>
+    {% endfor%}
+
+    <hr/>
+    <p>Áreas que terminam com as letras 'ica':</p>
+    {% for area in area_ica %}
+    <p>{{area.id}} - {{area.nome}}</p>
+    {% endfor%}
+    <hr/>
+
+    <p>Áreas que possuem o trecho 'mec':</p>
+    {% for area in area_mec %}
+    <p>{{area.id}} - {{area.nome}}</p>
+    {% endfor%}
+    <hr/>
+
+    <p>Áreas que possuem o trecho 'mec' e iniciam com 'Ele' (opcao1)</p>
+    {% for area in era_mec_ele %}
+    <p>{{area.id}} - {{area.nome}}</p>
+    {% endfor%}
+
+    <hr/>
+    <p>Áreas que possuem o trecho 'mec' e iniciam com 'Ele' (opcao2)</p>
+    {% for area in era_mec_ele_2 %}
+    <p>{{area.id}} - {{area.nome}}</p>
+    {% endfor%}
+    <hr/>
+
+    <p>Áreas que possuem id 1 ou id 3</p>
+    {% for area in area_1_3 %}
+    <p>{{area.id}} - {{area.nome}}</p>
+    {% endfor%}
+    <hr/>
+
+    <p>Quantas areas terminam com as letras 'ica' (opcao1)</p>
+
+    {% for area in area_ica_quant %}
+    <p>{{area.nome}}</p>
+    {% endfor%}
+    <hr/>
+    <hr/>
+
+    <p>Quantas areas terminam com as letras 'ica' (opcao2)</p>
+    {{%area_ica_qtd_2.count%}}
+    <hr/>
+
+
+    <p>Imprimir areas por ordem alfabética</p>
+    
+    <hr/>
+    <p>Imprimir areas por ordem alfabética inversa</p>
+    
+    
+</body>
+</html>
